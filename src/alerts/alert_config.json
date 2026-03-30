@@ -1,0 +1,14 @@
+{
+  "authorised_vehicles": [
+    "Light blue sedan",
+    "Silver sedan",
+    "Security Patrol Vehicle"
+  ],
+  "restricted_areas": [
+    "Garage",
+    "Server Room",
+    "South Fence",
+    "Restricted Parking Zone"
+  ],
+  "repeat_threshold": 2
+}

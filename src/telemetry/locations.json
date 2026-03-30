@@ -1,0 +1,22 @@
+{
+    "Main Gate": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+    },
+    "Parking Lot": {
+        "latitude": 37.7750,
+        "longitude": -122.4180
+    },
+    "Garage": {
+        "latitude": 37.7740,
+        "longitude": -122.4200
+    },
+    "South Fence": {
+        "latitude": 37.7735,
+        "longitude": -122.4190
+    },
+    "North Perimeter": {
+        "latitude": 37.7760,
+        "longitude": -122.4195
+    }
+}

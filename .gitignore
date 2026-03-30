@@ -23,3 +23,6 @@ frames/*
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Temporary test scripts
+test_gemini.py

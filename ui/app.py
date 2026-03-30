@@ -5,7 +5,6 @@ def initialize_session_state():
     default_states = {
         'processed_frames': [],
         'alerts': [],
-        'summary': None,
         'is_processing': False
     }
     for key, value in default_states.items():

@@ -76,3 +76,39 @@ RULES: Dict[str, SecurityRule] = {
 def get_all_rules() -> Dict[str, SecurityRule]:
     """Returns the dictionary of all defined security rules."""
     return RULES
+# ---------------------------------------------------------
+# DEPENDENCY PATCH: INJECTED TO RESOLVE IMPORT ERRORS
+# ---------------------------------------------------------
+import json
+import os
+
+try:
+    _config_path = os.path.join(os.path.dirname(__file__), 'alert_config.json')
+    if os.path.exists(_config_path):
+        with open(_config_path, 'r') as _f:
+            ALERT_CONFIG = json.load(_f)
+    else:
+        # Fallback default configuration if JSON is missing
+        ALERT_CONFIG = {
+            'authorised_vehicles': [],
+            'restricted_areas': ['North Perimeter', 'Server Room'],
+            'repeat_threshold': 3
+        }
+except Exception:
+    ALERT_CONFIG = {}
+# ---------------------------------------------------------
+# DEPENDENCY PATCH: HELPER FUNCTIONS FOR ALERT ENGINE
+# ---------------------------------------------------------
+def get_all_rules():
+    'Returns all defined rules. Assumes rules are stored in a list named RULES.'
+    return globals().get('RULES', [])
+
+def get_rule_by_id(rule_id):
+    'Fetches a specific rule by its ID.'
+    rules = get_all_rules()
+    for r in rules:
+        if isinstance(r, dict) and r.get('rule_id') == rule_id:
+            return r
+        elif hasattr(r, 'rule_id') and getattr(r, 'rule_id') == rule_id:
+            return r
+    return None

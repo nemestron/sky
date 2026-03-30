@@ -1,0 +1,40 @@
+/* Sky Sentinel Custom CSS - Dark Navy and Sky Blue Accents */
+.stApp {
+    background-color: #0a192f;
+    color: #ccd6f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e6f1ff !important;
+}
+
+/* Accent headers */
+h1 {
+    border-bottom: 2px solid #64ffda;
+    padding-bottom: 10px;
+}
+
+/* Button Styling */
+.stButton>button {
+    background-color: #112240;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    border: 1px solid #64ffda;
+}
+
+/* Metric text */
+div[data-testid="stMetricValue"] {
+    color: #64ffda;
+}
+
+/* Ensure content is not hidden behind the fixed footer */
+.block-container {
+    padding-bottom: 80px !important;
+}

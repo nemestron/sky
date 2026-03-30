@@ -1,0 +1,25 @@
+﻿# Environments
+venv/
+env/
+.env
+
+# Python Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database
+*.db
+*.sqlite3
+
+# Project specific
+data/*
+!data/sample_surveillance.mp4
+!data/simulated_frames.json
+frames/*
+!frames/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
